@@ -10,9 +10,9 @@ namespace SoftwareI.Classes
     {
         public string CompanyName { get; set; }
 
-        public Outsourced(int partid, string name, double price, int instock, int min, int max, string companyname)
+        public Outsourced(string name, double price, int instock, int min, int max, string companyname)
         {
-            PartID = partid;
+            PartID = GlobalConfig.PartCount;
             Name = name;
             Price = price;
             InStock = instock;
@@ -21,6 +21,17 @@ namespace SoftwareI.Classes
             CompanyName = companyname;
         }
 
-       
+        public Outsourced(int partID, string name, double price, int instock, int min, int max, string companyname)
+        {
+            PartID = partID;
+            Name = name;
+            Price = price;
+            InStock = instock;
+            Min = min;
+            Max = max;
+            CompanyName = companyname;
+        }
+
+
     }
 }

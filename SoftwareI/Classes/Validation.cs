@@ -18,9 +18,23 @@ namespace SoftwareI.Classes
             foreach( string entry in numericEntries)
             {
                 bool canConvert = float.TryParse(entry, out _);
-                if (canConvert != true) { return false; }
+                if (canConvert != true) {
+                    MessageBox.Show("Ensure that you are using the correct data types");
+                    return false;
+                }
             }
-            if (name == null) { return false; }
+            if (name == "") {
+                MessageBox.Show("Ensure that you entered a name for your part/product");
+                return false;
+            }
+            if (int.Parse(min) > int.Parse(max)) {
+                MessageBox.Show("The minimum value must be less than the maximum value");
+                return false;
+            }
+            if (int.Parse(min) > int.Parse(inStock) | int.Parse(max) < int.Parse(inStock)) {
+                MessageBox.Show("The instock amount must fall between the minimum and maximum values.");
+                return false;
+            }
             return true;
         }
 

@@ -21,9 +21,20 @@ namespace SoftwareI.Classes
         {
             
         }
-        public Product(int productid, string productname, double productprice, int productinstock, int productmin, int productmax, BindingList<Part> parts)
+        public Product(string productname, double productprice, int productinstock, int productmin, int productmax, BindingList<Part> parts)
         {
-            ProductID = productid;
+            ProductID = GlobalConfig.ProductCount;
+            ProductName = productname;
+            ProductPrice = productprice;
+            ProductInStock = productinstock;
+            ProductMin = productmin;
+            ProductMax = productmax;
+            AssociatedParts = parts;
+        }
+
+        public Product(int productID, string productname, double productprice, int productinstock, int productmin, int productmax, BindingList<Part> parts)
+        {
+            ProductID = productID;
             ProductName = productname;
             ProductPrice = productprice;
             ProductInStock = productinstock;
@@ -75,9 +86,5 @@ namespace SoftwareI.Classes
                 AssociatedParts[index] = updatedAssociatedPart;
             }
         }
-
-        //public static Product lookupProduct(int productID)
-
-
     }
 }

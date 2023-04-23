@@ -226,6 +226,7 @@
             addCandidatePartButton.TabIndex = 17;
             addCandidatePartButton.Text = "Add";
             addCandidatePartButton.UseVisualStyleBackColor = true;
+            addCandidatePartButton.Click += addCandidatePartButton_Click;
             // 
             // deleteAssociatedPartButton
             // 
@@ -268,6 +269,7 @@
             searchButton.TabIndex = 21;
             searchButton.Text = "Search";
             searchButton.UseVisualStyleBackColor = true;
+            searchButton.Click += searchButton_Click;
             // 
             // searchTextBox
             // 

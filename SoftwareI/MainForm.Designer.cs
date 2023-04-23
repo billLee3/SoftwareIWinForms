@@ -65,20 +65,20 @@
             // allPartsLabel
             // 
             allPartsLabel.AutoSize = true;
-            allPartsLabel.Location = new Point(28, 105);
+            allPartsLabel.Location = new Point(16, 107);
             allPartsLabel.Name = "allPartsLabel";
-            allPartsLabel.Size = new Size(88, 30);
+            allPartsLabel.Size = new Size(58, 30);
             allPartsLabel.TabIndex = 1;
-            allPartsLabel.Text = "All Parts";
+            allPartsLabel.Text = "Parts";
             // 
             // allProductsLabel
             // 
             allProductsLabel.AutoSize = true;
-            allProductsLabel.Location = new Point(435, 105);
+            allProductsLabel.Location = new Point(434, 108);
             allProductsLabel.Name = "allProductsLabel";
-            allProductsLabel.Size = new Size(124, 30);
+            allProductsLabel.Size = new Size(94, 30);
             allProductsLabel.TabIndex = 2;
-            allProductsLabel.Text = "All Products";
+            allProductsLabel.Text = "Products";
             // 
             // addPartButton
             // 
@@ -111,6 +111,7 @@
             deleteProductButton.TabIndex = 5;
             deleteProductButton.Text = "Delete Product";
             deleteProductButton.UseVisualStyleBackColor = true;
+            deleteProductButton.Click += deleteProductButton_Click;
             // 
             // deletePartButton
             // 
@@ -121,6 +122,7 @@
             deletePartButton.TabIndex = 6;
             deletePartButton.Text = "Delete Part";
             deletePartButton.UseVisualStyleBackColor = true;
+            deletePartButton.Click += deletePartButton_Click;
             // 
             // updateProductButton
             // 
@@ -131,6 +133,7 @@
             updateProductButton.TabIndex = 7;
             updateProductButton.Text = "Update Product";
             updateProductButton.UseVisualStyleBackColor = true;
+            updateProductButton.Click += updateProductButton_Click;
             // 
             // updatePartButton
             // 
@@ -141,6 +144,7 @@
             updatePartButton.TabIndex = 8;
             updatePartButton.Text = "Update Part";
             updatePartButton.UseVisualStyleBackColor = true;
+            updatePartButton.Click += updatePartButton_Click;
             // 
             // searchPartButton
             // 
@@ -151,6 +155,7 @@
             searchPartButton.TabIndex = 9;
             searchPartButton.Text = "Search";
             searchPartButton.UseVisualStyleBackColor = true;
+            searchPartButton.Click += searchPartButton_Click;
             // 
             // searchProductButton
             // 
@@ -161,6 +166,7 @@
             searchProductButton.TabIndex = 10;
             searchProductButton.Text = "Search";
             searchProductButton.UseVisualStyleBackColor = true;
+            searchProductButton.Click += searchProductButton_Click;
             // 
             // partSearchTextBox
             // 

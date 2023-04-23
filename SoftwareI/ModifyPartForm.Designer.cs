@@ -28,205 +28,194 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            InHouseRadioButton = new RadioButton();
-            outsourcedRadioButton = new RadioButton();
-            partIDLabel = new Label();
-            partNameLabel = new Label();
-            inStockLabel = new Label();
-            priceLabel = new Label();
-            maxLabel = new Label();
-            minLabel = new Label();
-            objectAttributeSwitchLabel = new Label();
-            IDTextBox = new TextBox();
-            partNameTextBox = new TextBox();
-            instockTextBox = new TextBox();
-            priceTextBox = new TextBox();
-            maxTextBox = new TextBox();
-            minTextBox = new TextBox();
-            objSpecificTextBox = new TextBox();
-            saveButton = new Button();
             cancelButton = new Button();
+            saveButton = new Button();
+            objSpecificTextBox = new TextBox();
+            minTextBox = new TextBox();
+            maxTextBox = new TextBox();
+            priceTextBox = new TextBox();
+            instockTextBox = new TextBox();
+            partNameTextBox = new TextBox();
+            IDTextBox = new TextBox();
+            objectAttributeSwitchLabel = new Label();
+            minLabel = new Label();
+            maxLabel = new Label();
+            priceLabel = new Label();
+            inStockLabel = new Label();
+            partNameLabel = new Label();
+            partIDLabel = new Label();
+            outsourcedRadioButton = new RadioButton();
+            InHouseRadioButton = new RadioButton();
             SuspendLayout();
             // 
-            // label1
+            // cancelButton
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(16, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(87, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Add Part";
+            cancelButton.Location = new Point(199, 405);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(75, 23);
+            cancelButton.TabIndex = 37;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += cancelButton_Click;
             // 
-            // InHouseRadioButton
+            // saveButton
             // 
-            InHouseRadioButton.AutoSize = true;
-            InHouseRadioButton.Location = new Point(146, 20);
-            InHouseRadioButton.Name = "InHouseRadioButton";
-            InHouseRadioButton.Size = new Size(74, 19);
-            InHouseRadioButton.TabIndex = 1;
-            InHouseRadioButton.TabStop = true;
-            InHouseRadioButton.Text = "In-House";
-            InHouseRadioButton.UseVisualStyleBackColor = true;
-            InHouseRadioButton.CheckedChanged += InHouseRadioButton_CheckedChanged;
+            saveButton.Location = new Point(114, 405);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(75, 23);
+            saveButton.TabIndex = 36;
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
-            // outsourcedRadioButton
+            // objSpecificTextBox
             // 
-            outsourcedRadioButton.AutoSize = true;
-            outsourcedRadioButton.Location = new Point(261, 20);
-            outsourcedRadioButton.Name = "outsourcedRadioButton";
-            outsourcedRadioButton.Size = new Size(87, 19);
-            outsourcedRadioButton.TabIndex = 2;
-            outsourcedRadioButton.TabStop = true;
-            outsourcedRadioButton.Text = "Outsourced";
-            outsourcedRadioButton.UseVisualStyleBackColor = true;
-            outsourcedRadioButton.CheckedChanged += outsourcedRadioButton_CheckedChanged;
+            objSpecificTextBox.Location = new Point(114, 351);
+            objSpecificTextBox.Name = "objSpecificTextBox";
+            objSpecificTextBox.Size = new Size(160, 23);
+            objSpecificTextBox.TabIndex = 35;
             // 
-            // partIDLabel
+            // minTextBox
             // 
-            partIDLabel.AutoSize = true;
-            partIDLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            partIDLabel.Location = new Point(146, 74);
-            partIDLabel.Name = "partIDLabel";
-            partIDLabel.Size = new Size(24, 20);
-            partIDLabel.TabIndex = 3;
-            partIDLabel.Text = "ID";
+            minTextBox.Location = new Point(114, 309);
+            minTextBox.Name = "minTextBox";
+            minTextBox.Size = new Size(160, 23);
+            minTextBox.TabIndex = 34;
             // 
-            // partNameLabel
+            // maxTextBox
             // 
-            partNameLabel.AutoSize = true;
-            partNameLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            partNameLabel.Location = new Point(121, 119);
-            partNameLabel.Name = "partNameLabel";
-            partNameLabel.Size = new Size(49, 20);
-            partNameLabel.TabIndex = 4;
-            partNameLabel.Text = "Name";
+            maxTextBox.Location = new Point(117, 267);
+            maxTextBox.Name = "maxTextBox";
+            maxTextBox.Size = new Size(157, 23);
+            maxTextBox.TabIndex = 33;
             // 
-            // inStockLabel
+            // priceTextBox
             // 
-            inStockLabel.AutoSize = true;
-            inStockLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            inStockLabel.Location = new Point(109, 169);
-            inStockLabel.Name = "inStockLabel";
-            inStockLabel.Size = new Size(61, 20);
-            inStockLabel.TabIndex = 5;
-            inStockLabel.Text = "In Stock";
+            priceTextBox.Location = new Point(117, 222);
+            priceTextBox.Name = "priceTextBox";
+            priceTextBox.Size = new Size(157, 23);
+            priceTextBox.TabIndex = 32;
             // 
-            // priceLabel
+            // instockTextBox
             // 
-            priceLabel.AutoSize = true;
-            priceLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            priceLabel.Location = new Point(94, 213);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new Size(76, 20);
-            priceLabel.TabIndex = 6;
-            priceLabel.Text = "Price/Cost";
+            instockTextBox.Location = new Point(117, 178);
+            instockTextBox.Name = "instockTextBox";
+            instockTextBox.Size = new Size(157, 23);
+            instockTextBox.TabIndex = 31;
             // 
-            // maxLabel
+            // partNameTextBox
             // 
-            maxLabel.AutoSize = true;
-            maxLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            maxLabel.Location = new Point(133, 259);
-            maxLabel.Name = "maxLabel";
-            maxLabel.Size = new Size(37, 20);
-            maxLabel.TabIndex = 7;
-            maxLabel.Text = "Max";
+            partNameTextBox.Location = new Point(117, 128);
+            partNameTextBox.Name = "partNameTextBox";
+            partNameTextBox.Size = new Size(157, 23);
+            partNameTextBox.TabIndex = 30;
             // 
-            // minLabel
+            // IDTextBox
             // 
-            minLabel.AutoSize = true;
-            minLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            minLabel.Location = new Point(133, 304);
-            minLabel.Name = "minLabel";
-            minLabel.Size = new Size(34, 20);
-            minLabel.TabIndex = 8;
-            minLabel.Text = "Min";
+            IDTextBox.Location = new Point(117, 82);
+            IDTextBox.Name = "IDTextBox";
+            IDTextBox.Size = new Size(157, 23);
+            IDTextBox.TabIndex = 29;
             // 
             // objectAttributeSwitchLabel
             // 
             objectAttributeSwitchLabel.AutoSize = true;
             objectAttributeSwitchLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            objectAttributeSwitchLabel.Location = new Point(94, 346);
+            objectAttributeSwitchLabel.Location = new Point(35, 354);
             objectAttributeSwitchLabel.Name = "objectAttributeSwitchLabel";
             objectAttributeSwitchLabel.Size = new Size(37, 20);
-            objectAttributeSwitchLabel.TabIndex = 9;
+            objectAttributeSwitchLabel.TabIndex = 28;
             objectAttributeSwitchLabel.Text = "TBD";
             // 
-            // IDTextBox
+            // minLabel
             // 
-            IDTextBox.Location = new Point(176, 74);
-            IDTextBox.Name = "IDTextBox";
-            IDTextBox.Size = new Size(157, 23);
-            IDTextBox.TabIndex = 10;
+            minLabel.AutoSize = true;
+            minLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            minLabel.Location = new Point(74, 312);
+            minLabel.Name = "minLabel";
+            minLabel.Size = new Size(34, 20);
+            minLabel.TabIndex = 27;
+            minLabel.Text = "Min";
             // 
-            // partNameTextBox
+            // maxLabel
             // 
-            partNameTextBox.Location = new Point(176, 120);
-            partNameTextBox.Name = "partNameTextBox";
-            partNameTextBox.Size = new Size(157, 23);
-            partNameTextBox.TabIndex = 11;
+            maxLabel.AutoSize = true;
+            maxLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            maxLabel.Location = new Point(74, 267);
+            maxLabel.Name = "maxLabel";
+            maxLabel.Size = new Size(37, 20);
+            maxLabel.TabIndex = 26;
+            maxLabel.Text = "Max";
             // 
-            // instockTextBox
+            // priceLabel
             // 
-            instockTextBox.Location = new Point(176, 170);
-            instockTextBox.Name = "instockTextBox";
-            instockTextBox.Size = new Size(157, 23);
-            instockTextBox.TabIndex = 12;
+            priceLabel.AutoSize = true;
+            priceLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            priceLabel.Location = new Point(35, 221);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(76, 20);
+            priceLabel.TabIndex = 25;
+            priceLabel.Text = "Price/Cost";
             // 
-            // priceTextBox
+            // inStockLabel
             // 
-            priceTextBox.Location = new Point(176, 214);
-            priceTextBox.Name = "priceTextBox";
-            priceTextBox.Size = new Size(157, 23);
-            priceTextBox.TabIndex = 13;
+            inStockLabel.AutoSize = true;
+            inStockLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            inStockLabel.Location = new Point(50, 177);
+            inStockLabel.Name = "inStockLabel";
+            inStockLabel.Size = new Size(61, 20);
+            inStockLabel.TabIndex = 24;
+            inStockLabel.Text = "In Stock";
             // 
-            // maxTextBox
+            // partNameLabel
             // 
-            maxTextBox.Location = new Point(176, 259);
-            maxTextBox.Name = "maxTextBox";
-            maxTextBox.Size = new Size(157, 23);
-            maxTextBox.TabIndex = 14;
+            partNameLabel.AutoSize = true;
+            partNameLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            partNameLabel.Location = new Point(62, 127);
+            partNameLabel.Name = "partNameLabel";
+            partNameLabel.Size = new Size(49, 20);
+            partNameLabel.TabIndex = 23;
+            partNameLabel.Text = "Name";
             // 
-            // minTextBox
+            // partIDLabel
             // 
-            minTextBox.Location = new Point(173, 301);
-            minTextBox.Name = "minTextBox";
-            minTextBox.Size = new Size(160, 23);
-            minTextBox.TabIndex = 15;
+            partIDLabel.AutoSize = true;
+            partIDLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            partIDLabel.Location = new Point(87, 82);
+            partIDLabel.Name = "partIDLabel";
+            partIDLabel.Size = new Size(24, 20);
+            partIDLabel.TabIndex = 22;
+            partIDLabel.Text = "ID";
             // 
-            // objSpecificTextBox
+            // outsourcedRadioButton
             // 
-            objSpecificTextBox.Location = new Point(173, 343);
-            objSpecificTextBox.Name = "objSpecificTextBox";
-            objSpecificTextBox.Size = new Size(160, 23);
-            objSpecificTextBox.TabIndex = 16;
+            outsourcedRadioButton.AutoSize = true;
+            outsourcedRadioButton.Location = new Point(202, 28);
+            outsourcedRadioButton.Name = "outsourcedRadioButton";
+            outsourcedRadioButton.Size = new Size(87, 19);
+            outsourcedRadioButton.TabIndex = 21;
+            outsourcedRadioButton.TabStop = true;
+            outsourcedRadioButton.Text = "Outsourced";
+            outsourcedRadioButton.UseVisualStyleBackColor = true;
+            outsourcedRadioButton.CheckedChanged += outsourcedRadioButton_CheckedChanged;
             // 
-            // saveButton
+            // InHouseRadioButton
             // 
-            saveButton.Location = new Point(173, 397);
-            saveButton.Name = "saveButton";
-            saveButton.Size = new Size(75, 23);
-            saveButton.TabIndex = 17;
-            saveButton.Text = "Save";
-            saveButton.UseVisualStyleBackColor = true;
-            saveButton.Click += saveButton_Click;
+            InHouseRadioButton.AutoSize = true;
+            InHouseRadioButton.Location = new Point(87, 28);
+            InHouseRadioButton.Name = "InHouseRadioButton";
+            InHouseRadioButton.Size = new Size(74, 19);
+            InHouseRadioButton.TabIndex = 20;
+            InHouseRadioButton.TabStop = true;
+            InHouseRadioButton.Text = "In-House";
+            InHouseRadioButton.UseVisualStyleBackColor = true;
+            InHouseRadioButton.CheckedChanged += InHouseRadioButton_CheckedChanged;
             // 
-            // cancelButton
-            // 
-            cancelButton.Location = new Point(258, 397);
-            cancelButton.Name = "cancelButton";
-            cancelButton.Size = new Size(75, 23);
-            cancelButton.TabIndex = 18;
-            cancelButton.Text = "Cancel";
-            cancelButton.UseVisualStyleBackColor = true;
-            cancelButton.Click += cancelButton_Click;
-            // 
-            // AddPartForm
+            // ModifyPartForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(418, 484);
+            ClientSize = new Size(359, 463);
             Controls.Add(cancelButton);
             Controls.Add(saveButton);
             Controls.Add(objSpecificTextBox);
@@ -245,33 +234,31 @@
             Controls.Add(partIDLabel);
             Controls.Add(outsourcedRadioButton);
             Controls.Add(InHouseRadioButton);
-            Controls.Add(label1);
-            Name = "AddPartForm";
-            Text = "AddPartForm";
+            Name = "ModifyPartForm";
+            Text = "ModifyPartForm";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private RadioButton InHouseRadioButton;
-        private RadioButton outsourcedRadioButton;
-        private Label partIDLabel;
-        private Label partNameLabel;
-        private Label inStockLabel;
-        private Label priceLabel;
-        private Label maxLabel;
-        private Label minLabel;
-        private Label objectAttributeSwitchLabel;
-        private TextBox IDTextBox;
-        private TextBox partNameTextBox;
-        private TextBox instockTextBox;
-        private TextBox priceTextBox;
-        private TextBox maxTextBox;
-        private TextBox minTextBox;
-        private TextBox objSpecificTextBox;
-        private Button saveButton;
         private Button cancelButton;
+        private Button saveButton;
+        private TextBox objSpecificTextBox;
+        private TextBox minTextBox;
+        private TextBox maxTextBox;
+        private TextBox priceTextBox;
+        private TextBox instockTextBox;
+        private TextBox partNameTextBox;
+        private TextBox IDTextBox;
+        private Label objectAttributeSwitchLabel;
+        private Label minLabel;
+        private Label maxLabel;
+        private Label priceLabel;
+        private Label inStockLabel;
+        private Label partNameLabel;
+        private Label partIDLabel;
+        private RadioButton outsourcedRadioButton;
+        private RadioButton InHouseRadioButton;
     }
 }

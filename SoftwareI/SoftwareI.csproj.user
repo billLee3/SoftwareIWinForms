@@ -7,7 +7,16 @@
     <Compile Update="AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ModifyPartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ModifyProduct.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

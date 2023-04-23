@@ -23,9 +23,20 @@ namespace SoftwareI.Classes
             Max = 0;
         }
 
-        public InHouse(int partid,  string name, double price, int instock, int min, int max, int machineid)
+        public InHouse(string name, double price, int instock, int min, int max, int machineid)
         {
-            PartID = partid;
+            PartID = GlobalConfig.PartCount;
+            Name = name;
+            Price = price;
+            InStock = instock;
+            Min = min;
+            Max = max;
+            MachineID = machineid;
+        }
+
+        public InHouse(int partID, string name, double price, int instock, int min, int max, int machineid)
+        {
+            PartID = partID;
             Name = name;
             Price = price;
             InStock = instock;

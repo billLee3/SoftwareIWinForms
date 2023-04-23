@@ -13,7 +13,7 @@ namespace SoftwareI
 {
     public partial class AddPartForm : Form
     {
-        
+
         public AddPartForm()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace SoftwareI
             bool standardCheck = validator.StandardValidation(IDTextBox.Text, partNameTextBox.Text, priceTextBox.Text, instockTextBox.Text, maxTextBox.Text, minTextBox.Text);
             if (standardCheck != true) 
             {
-                MessageBox.Show("Please check you entries and ensure that all are filled in and that the ID, price, InStock, Max, and Min options are all numeric. ");
+                return;
             }
             else
             {
@@ -55,23 +55,24 @@ namespace SoftwareI
                 {
                     if (InHouseRadioButton.Checked == true)
                     {
-                        SoftwareI.Classes.Part part = new SoftwareI.Classes.InHouse(GlobalConfig.PartCount, partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), int.Parse(objSpecificTextBox.Text));
+                        SoftwareI.Classes.Part part = new SoftwareI.Classes.InHouse(partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), int.Parse(objSpecificTextBox.Text));
                         //Need to figure out Global Configuration to save to the BindingList in the MainForm
                         GlobalConfig.Inventory.AllParts.Add(part);
                     }
 
                     if (outsourcedRadioButton.Checked == true)
                     {
-                        SoftwareI.Classes.Part part = new SoftwareI.Classes.Outsourced(GlobalConfig.PartCount, partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), objSpecificTextBox.Text);
+                        SoftwareI.Classes.Part part = new SoftwareI.Classes.Outsourced(partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), objSpecificTextBox.Text);
                         GlobalConfig.Inventory.AllParts.Add(part); 
                     }
-                        
+
                 }
             }
             GlobalConfig.PartCount += 1;
             Close();
-
-
         }
+
     }
+
 }
+
