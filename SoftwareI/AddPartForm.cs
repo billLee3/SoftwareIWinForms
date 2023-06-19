@@ -21,10 +21,12 @@ namespace SoftwareI
             IDTextBox.Enabled = false;
         }
 
+        //Changes the last entry based on the radio button selected
         private void InHouseRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             objectAttributeSwitchLabel.Text = "Machine ID";
         }
+    
 
         private void outsourcedRadioButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -36,6 +38,7 @@ namespace SoftwareI
             Close();
         }
 
+        //Save button with validation
         private void saveButton_Click(object sender, EventArgs e)
         {
             SoftwareI.Classes.Validation validator = new SoftwareI.Classes.Validation();
@@ -68,6 +71,7 @@ namespace SoftwareI
 
                 }
             }
+            //Part count incremented for auto-numbering
             GlobalConfig.PartCount += 1;
             Close();
         }

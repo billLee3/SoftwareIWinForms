@@ -35,7 +35,7 @@ namespace SoftwareI
             {
                 IDTextBox.Text = Convert.ToString(productID);
                 IDTextBox.Enabled = false;
-                //Grabing the associated product from the global Product list
+                //Grabbing the associated product from the global Product list
                 var objProduct = GlobalConfig.Inventory.lookupProduct(productID);
                 productNameTextBox.Text = objProduct.ProductName.ToString();
                 inStockTextBox.Text = objProduct.ProductInStock.ToString();

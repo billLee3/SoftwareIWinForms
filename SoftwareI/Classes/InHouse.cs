@@ -12,6 +12,7 @@ namespace SoftwareI.Classes
     {
         public int MachineID { get; set; }
 
+        //Default Constructor
         public InHouse()
         {
             MachineID = 0;
@@ -23,6 +24,7 @@ namespace SoftwareI.Classes
             Max = 0;
         }
 
+        //Constructor with auto-incrementing partID
         public InHouse(string name, double price, int instock, int min, int max, int machineid)
         {
             PartID = GlobalConfig.PartCount;
@@ -34,6 +36,7 @@ namespace SoftwareI.Classes
             MachineID = machineid;
         }
 
+        //Constructor with hardcoded partID
         public InHouse(int partID, string name, double price, int instock, int min, int max, int machineid)
         {
             PartID = partID;

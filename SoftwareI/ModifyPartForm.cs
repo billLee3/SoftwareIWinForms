@@ -27,6 +27,7 @@ namespace SoftwareI
             Part objPart = GlobalConfig.Inventory.LookupPart(partID);
             string type = objPart.GetType().Name;
 
+            //Ensuring that the correct part object is updated. 
             if (type == "InHouse")
             {
                 InHouse objInHouse = (InHouse)(objPart);

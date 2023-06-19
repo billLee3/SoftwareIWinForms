@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareI
 {
+    //Class for initializing data needed throughout the application.
     internal class GlobalConfig
     {
         private static Inventory inventory = new Inventory();

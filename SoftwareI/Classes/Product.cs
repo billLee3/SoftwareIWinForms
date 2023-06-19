@@ -17,6 +17,7 @@ namespace SoftwareI.Classes
         public int ProductMax { get; set; }
         public BindingList<Part> AssociatedParts { get; set; }
 
+        //Empty default constructor
         public Product()
         {
             

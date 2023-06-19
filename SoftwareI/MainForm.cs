@@ -25,6 +25,7 @@ namespace SoftwareI
             allProductsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             allProductsDataGridView.MultiSelect = false;
             //Global Config manually input 4 times here as the auto incrementing is captured with the addpart form. 
+            // Data to start the application with. 
             GlobalConfig.PartCount += 1;
             Part tire = new InHouse("Tire", 100, 2, 1, 10, 1234);
             GlobalConfig.PartCount += 1;

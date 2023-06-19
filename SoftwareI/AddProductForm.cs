@@ -25,6 +25,7 @@ namespace SoftwareI
             IDTextBox.Enabled = false;
         }
 
+        //Save button with validation
         private void saveButton_Click(object sender, EventArgs e)
         {
             SoftwareI.Classes.Validation validator = new SoftwareI.Classes.Validation();
@@ -43,6 +44,7 @@ namespace SoftwareI
                 Product product = new Product(productNameTextBox.Text, price, inStock, max, min, associatedParts);
                 GlobalConfig.Inventory.AllProducts.Add(product);
             }
+            //Incrementing for auto id numbering
             GlobalConfig.ProductCount += 1;
             Close();
         }
@@ -54,9 +56,10 @@ namespace SoftwareI
 
         private void addCandidatePartButton_Click(object sender, EventArgs e)
         {
-            //This works but may need more functionality. 
+             
             if (allCandidatePartsDGV.SelectedRows.Count == 1)
             {
+                //grabs the selected row and adds it to the list of parts assigned to the product. 
                 var selectedRow = allCandidatePartsDGV.SelectedRows[0];
                 var part = (Part)selectedRow.DataBoundItem;
                 associatedParts.Add(part);
