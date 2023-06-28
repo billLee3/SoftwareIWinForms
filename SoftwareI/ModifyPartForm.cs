@@ -74,14 +74,14 @@ namespace SoftwareI
                 {
                     if (InHouseRadioButton.Checked == true)
                     {
-                        InHouse updatedPart = new InHouse(int.Parse(IDTextBox.Text), partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), int.Parse(objSpecificTextBox.Text));
+                        InHouse updatedPart = new InHouse(int.Parse(IDTextBox.Text), partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(minTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(objSpecificTextBox.Text));
                         GlobalConfig.Inventory.updatePart(int.Parse(IDTextBox.Text), updatedPart);
                         MessageBox.Show("The part has been updated");
                         Close();
                     }
                     else if (outsourcedRadioButton.Checked == true)
                     {
-                        Outsourced updatedPart = new Outsourced(int.Parse(IDTextBox.Text), partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), objSpecificTextBox.Text);
+                        Outsourced updatedPart = new Outsourced(int.Parse(IDTextBox.Text), partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(minTextBox.Text), int.Parse(maxTextBox.Text), objSpecificTextBox.Text);
                         GlobalConfig.Inventory.updatePart(int.Parse(IDTextBox.Text), updatedPart);
                         Close();
                     }

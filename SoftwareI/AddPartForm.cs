@@ -58,14 +58,14 @@ namespace SoftwareI
                 {
                     if (InHouseRadioButton.Checked == true)
                     {
-                        SoftwareI.Classes.Part part = new SoftwareI.Classes.InHouse(partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), int.Parse(objSpecificTextBox.Text));
+                        SoftwareI.Classes.Part part = new SoftwareI.Classes.InHouse(partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(minTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(objSpecificTextBox.Text));
                         //Need to figure out Global Configuration to save to the BindingList in the MainForm
                         GlobalConfig.Inventory.AllParts.Add(part);
                     }
 
                     if (outsourcedRadioButton.Checked == true)
                     {
-                        SoftwareI.Classes.Part part = new SoftwareI.Classes.Outsourced(partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), objSpecificTextBox.Text);
+                        SoftwareI.Classes.Part part = new SoftwareI.Classes.Outsourced(partNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(instockTextBox.Text), int.Parse(minTextBox.Text), int.Parse(maxTextBox.Text), objSpecificTextBox.Text);
                         GlobalConfig.Inventory.AllParts.Add(part); 
                     }
 

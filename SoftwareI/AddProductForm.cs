@@ -41,7 +41,7 @@ namespace SoftwareI
                 int max = int.Parse(maxTextBox.Text);
                 int min = int.Parse(minTextBox.Text);
 
-                Product product = new Product(productNameTextBox.Text, price, inStock, max, min, associatedParts);
+                Product product = new Product(productNameTextBox.Text, price, inStock, min, max, associatedParts);
                 GlobalConfig.Inventory.AllProducts.Add(product);
             }
             //Incrementing for auto id numbering

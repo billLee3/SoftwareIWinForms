@@ -136,7 +136,7 @@ namespace SoftwareI
             }
 
             associatedParts = finalizedParts;
-            Product updatedProduct = new Product(productID, productNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(inStockTextBox.Text), int.Parse(maxTextBox.Text), int.Parse(minTextBox.Text), associatedParts);
+            Product updatedProduct = new Product(productID, productNameTextBox.Text, float.Parse(priceTextBox.Text), int.Parse(inStockTextBox.Text), int.Parse(minTextBox.Text), int.Parse(maxTextBox.Text), associatedParts);
             GlobalConfig.Inventory.updateProduct(productID, updatedProduct);
             MessageBox.Show("You've updated the product. ");
             Close();
